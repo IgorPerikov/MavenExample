@@ -10,6 +10,6 @@ public class TestTime
 	public void testMain() 
 	{
 		String dt = new java.text.SimpleDateFormat(("hh:mm aaa")).format(java.util.Calendar.getInstance().getTime());
-        assertNotNull(dt);
+        assertNotNull(dt);//проверка на нот нулл
 	}
 }
