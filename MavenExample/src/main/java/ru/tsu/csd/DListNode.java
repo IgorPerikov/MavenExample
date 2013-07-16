@@ -6,6 +6,11 @@ public class DListNode
 	private DListNode next;
 	private DListNode prev;
 	
+	public DListNode(int value)
+	{
+		this.value = value;
+	}
+	
 	public DListNode getNext()
 	{
 		return next;
