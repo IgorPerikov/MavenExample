@@ -11,9 +11,9 @@ public class DListNode
 		return next;
 	}
 	
-	public void setNext(DListNode dln)
+	public void setNext(DListNode dLNode)
 	{
-		next = dln;
+		next = dLNode;
 	}
 	
 	public DListNode getPrev()
@@ -21,16 +21,15 @@ public class DListNode
 		return prev;
 	}
 	
-	public void setPrev(DListNode dln)
+	public void setPrev(DListNode dLNode)
 	{
-		prev = dln;
+		prev = dLNode;
 	}
 	
 	public int getValue()
 	{
 		return value;
 	}
-	
 	
 	public void setValue(int a)
 	{
