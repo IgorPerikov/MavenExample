@@ -31,6 +31,7 @@ public class DListNode
 		return value;
 	}
 	
+	
 	public void setValue(int a)
 	{
 		value = a;
