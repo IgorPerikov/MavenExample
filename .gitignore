@@ -1,4 +1,4 @@
 /target
 /.settings
-.class
-.jar
+*.class
+*.jar
