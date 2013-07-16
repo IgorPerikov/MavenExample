@@ -9,7 +9,6 @@ public class DListNode
 	public DListNode(int value)
 	{
 		this.value = value;
-		
 	}
 	
 	public DListNode getNext()
