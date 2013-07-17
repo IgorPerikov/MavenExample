@@ -8,7 +8,7 @@ public class DList
 	{
 		FirstNode = new DListNode(value);
 		FirstNode.setNext(FirstNode);
-		//FirstNode.setPrev(FirstNode);
+		FirstNode.setPrev(FirstNode);
 	}
 	
 	public void Add(DListNode dln) 
@@ -18,9 +18,11 @@ public class DList
 		{
 			NextNode = NextNode.getNext();
 		}
-		NextNode = dln;
+		NextNode.setNext(dln);
+		dln.setPrev(NextNode);
+		dln.setNext(FirstNode);
+		FirstNode.setPrev(dln);
 	}
-	//add at the end
 	//size
 	//create
 	//test
