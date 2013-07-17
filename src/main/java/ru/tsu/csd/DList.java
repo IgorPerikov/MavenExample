@@ -11,13 +11,14 @@ public class DList
 		FirstNode.setPrev(FirstNode);
 	}
 	
-	public void add(DListNode dln) 
+	public void add(int value) 
 	{
 		DListNode NextNode = FirstNode.getNext();
 		while(NextNode.getNext() != FirstNode)
 		{
 			NextNode = NextNode.getNext();
 		}
+		DListNode dln = new DListNode(value);
 		NextNode.setNext(dln);
 		dln.setPrev(NextNode);
 		dln.setNext(FirstNode);
@@ -36,6 +37,5 @@ public class DList
 		if (FirstNode.getNext() != FirstNode) i++;
 		return i;
 	}
-	//create
 	//test
 }
