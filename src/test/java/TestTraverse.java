@@ -1,3 +1,5 @@
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import ru.tsu.csd.DList;
@@ -12,10 +14,16 @@ public class TestTraverse
         DList list = new DList(25);
         list.add(26);
         list.add(27);
-        while (list.firstNode.getNext() != null) 
+        list.add(28);
+        list.add(29);
+    	System.out.println(list.firstNode.getValue());
+    	DListNode nextNode = list.firstNode.getNext();
+        while (nextNode.getNext() != null) 
         {
-            DListNode next = list.firstNode.getNext();
-            System.out.println(next.getValue());
+        	System.out.println(nextNode.getValue());
+        	nextNode = nextNode.getNext();
         }
+        System.out.println(nextNode.getValue());
+        //assertEquals(list.size(), 3);
     }
 }
