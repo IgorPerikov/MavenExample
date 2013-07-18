@@ -44,15 +44,21 @@ public class DList
 	
 	public int size()
 	{
-		//DListNode NextNode = firstNode.getNext();
 		int i = 1;
-		/*
-		while(NextNode.getNext() != null)
+		if (firstNode.getNext() != null)
 		{
-			NextNode = NextNode.getNext();
-			i++;
+			DListNode nextNode = firstNode.getNext();
+			while (nextNode.getNext() != null)
+			{
+				i++;
+				nextNode = nextNode.getNext();
+			}
 		}
-		if (firstNode.getNext() != firstNode) i++;*/
+		else
+		{
+			return i;
+		}
+		i++;
 		return i;
 	}
 }
