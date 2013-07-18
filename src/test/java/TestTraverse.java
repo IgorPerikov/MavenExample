@@ -17,6 +17,5 @@ public class TestTraverse
             DListNode next = list.firstNode.getNext();
             System.out.println(next.getValue());
         }
- 
     }
 }

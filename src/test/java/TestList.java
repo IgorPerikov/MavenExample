@@ -1,6 +1,7 @@
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import ru.tsu.csd.DList;
@@ -15,11 +16,14 @@ public class TestList
 	{
 		list.add(32);
 		list.add(43);
+		list.add(11);
+		list.add(6);
 	}
 	
+	@Ignore
 	@Test
-	public void testSum()
+	public void testAdd()
 	{
-		assertEquals(list.size(), 3);
+		assertEquals(list.size(), 5);
 	}
 }
