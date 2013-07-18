@@ -7,13 +7,30 @@ public class DList
 	public DList(int value) 
 	{
 		firstNode = new DListNode(value);
-		firstNode.setNext(firstNode);
-		firstNode.setPrev(null);
+		firstNode.setNext(null);
+		//firstNode.setPrev(null);
 	}
 	
 	public void add(int value) 
 	{
-		DListNode NextNode = firstNode.getNext();
+		if (firstNode.getNext() != null)
+		{
+			DListNode nextNode = firstNode.getNext();
+			while(nextNode.getNext() != null)
+				nextNode = nextNode.getNext();
+			DListNode dln = new DListNode(value);
+			nextNode.setNext(dln);
+			dln.setPrev(nextNode);
+			dln.setNext(null);
+		}
+		else
+		{
+			DListNode dln = new DListNode(value);
+			firstNode.setNext(dln);
+			dln.setPrev(firstNode);
+			dln.setNext(null);
+		}
+		/*DListNode NextNode = firstNode.getNext();
 		while(NextNode.getNext() != null)
 		{
 			NextNode = NextNode.getNext();
@@ -21,20 +38,21 @@ public class DList
 		DListNode dln = new DListNode(value);
 		NextNode.setNext(dln);
 		dln.setPrev(NextNode);
-		dln.setNext(firstNode);
-		firstNode.setPrev(dln);
+		dln.setNext(null);
+		firstNode.setPrev(dln);*/
 	}
 	
 	public int size()
 	{
-		DListNode NextNode = firstNode.getNext();
+		//DListNode NextNode = firstNode.getNext();
 		int i = 1;
+		/*
 		while(NextNode.getNext() != null)
 		{
 			NextNode = NextNode.getNext();
 			i++;
 		}
-		if (firstNode.getNext() != firstNode) i++;
+		if (firstNode.getNext() != firstNode) i++;*/
 		return i;
 	}
 }
