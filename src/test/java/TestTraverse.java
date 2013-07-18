@@ -24,6 +24,7 @@ public class TestTraverse
         	nextNode = nextNode.getNext();
         }
         System.out.println(nextNode.getValue());
-        //assertEquals(list.size(), 3);
+        assertEquals(list.size(), 5);
+        //System.out.println(list.size());
     }
 }
