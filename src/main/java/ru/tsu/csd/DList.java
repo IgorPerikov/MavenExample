@@ -9,7 +9,6 @@ public class DList
 		return firstNode;
 	}
 	
-	
 	public DList(int value) 
 	{
 		firstNode = new DListNode(value);

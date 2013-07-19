@@ -15,7 +15,6 @@ public class TestTraverse
         list.add(26);
         list.add(27);
         list.add(28);
-        
         list.add(29);
     	System.out.println(list.getFirstNode().getValue());
     	DListNode nextNode = list.getFirstNode().getNext();
