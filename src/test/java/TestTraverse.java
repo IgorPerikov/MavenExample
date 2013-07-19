@@ -16,8 +16,8 @@ public class TestTraverse
         list.add(27);
         list.add(28);
         list.add(29);
-    	System.out.println(list.firstNode.getValue());
-    	DListNode nextNode = list.firstNode.getNext();
+    	System.out.println(list.getFirstNode().getValue());
+    	DListNode nextNode = list.getFirstNode().getNext();
         while (nextNode.getNext() != null) 
         {
         	System.out.println(nextNode.getValue());

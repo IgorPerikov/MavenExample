@@ -2,7 +2,12 @@ package ru.tsu.csd;
 
 public class DList 
 {
-	public DListNode firstNode;
+	private DListNode firstNode;
+	
+	public DListNode getFirstNode()
+	{
+		return firstNode;
+	}
 	
 	public DList(int value) 
 	{
