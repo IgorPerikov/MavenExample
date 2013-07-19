@@ -13,7 +13,6 @@ public class DList
 	{
 		firstNode = new DListNode(value);
 		firstNode.setNext(null);
-		//firstNode.setPrev(null);
 	}
 	
 	public void add(int value) 
@@ -35,16 +34,6 @@ public class DList
 			dln.setPrev(firstNode);
 			dln.setNext(null);
 		}
-		/*DListNode NextNode = firstNode.getNext();
-		while(NextNode.getNext() != null)
-		{
-			NextNode = NextNode.getNext();
-		}
-		DListNode dln = new DListNode(value);
-		NextNode.setNext(dln);
-		dln.setPrev(NextNode);
-		dln.setNext(null);
-		firstNode.setPrev(dln);*/
 	}
 	
 	public int size()
