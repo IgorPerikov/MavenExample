@@ -1,42 +1,42 @@
 package ru.tsu.csd;
 
-public class DListNode 
+public class DListNode<T>
 {
-	private int value;
-	private DListNode next;
-	private DListNode prev;
+	private T value;
+	private DListNode<T> next;
+	private DListNode<T> prev;
 	
-	public DListNode(int value)
+	public DListNode(T value)
 	{
 		this.value = value;
 	}
 	
-	public DListNode getNext()
+	public DListNode<T> getNext()
 	{
 		return next;
 	}
 	
-	public void setNext(DListNode dLNode)
+	public void setNext(DListNode<T> dLNode)
 	{
 		next = dLNode;
 	}
 	
-	public DListNode getPrev()
+	public DListNode<T> getPrev()
 	{
 		return prev;
 	}
 	
-	public void setPrev(DListNode dLNode)
+	public void setPrev(DListNode<T> dLNode)
 	{
 		prev = dLNode;
 	}
 	
-	public int getValue()
+	public T getValue()
 	{
 		return value;
 	}
 	
-	public void setValue(int a)
+	public void setValue(T a)
 	{
 		value = a;
 	}

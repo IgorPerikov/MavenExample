@@ -1,35 +1,35 @@
 package ru.tsu.csd;
 
-public class DList 
+public class DList<T>
 {
-	private DListNode firstNode;
+	private DListNode<T> firstNode;
 	
-	public DListNode getFirstNode()
+	public DListNode<T> getFirstNode()
 	{
 		return firstNode;
 	}
 	
-	public DList(int value) 
+	public DList(T value) 
 	{
-		firstNode = new DListNode(value);
+		firstNode = new DListNode<T>(value);
 		firstNode.setNext(null);
 	}
 	
-	public void add(int value) 
+	public void add(T value) 
 	{
 		if (firstNode.getNext() != null)
 		{
-			DListNode nextNode = firstNode.getNext();
+			DListNode<T> nextNode = firstNode.getNext();
 			while(nextNode.getNext() != null)
 				nextNode = nextNode.getNext();
-			DListNode dln = new DListNode(value);
+			DListNode<T> dln = new DListNode<T>(value);
 			nextNode.setNext(dln);
 			dln.setPrev(nextNode);
 			dln.setNext(null);
 		}
 		else
 		{
-			DListNode dln = new DListNode(value);
+			DListNode<T> dln = new DListNode<T>(value);
 			firstNode.setNext(dln);
 			dln.setPrev(firstNode);
 			dln.setNext(null);
@@ -41,7 +41,7 @@ public class DList
 		int i = 1;
 		if (firstNode.getNext() != null)
 		{
-			DListNode nextNode = firstNode.getNext();
+			DListNode<T> nextNode = firstNode.getNext();
 			while (nextNode.getNext() != null)
 			{
 				i++;
