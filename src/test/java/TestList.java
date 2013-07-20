@@ -19,7 +19,6 @@ public class TestList
 		list.add(11);
 		list.add(6);
 	}
-	
 	@Ignore
 	@Test
 	public void testAdd()

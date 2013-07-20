@@ -65,7 +65,7 @@ public class DList<T>
 	@Override
 	protected DList<T> clone()
 	{
-		DList<T> list = new DList<>(null);
+		DList<T> list = new DList<T>(null);
 		/*bla bla bla 
 		while (getNext() != null)
 		list.add(nextNode);*/

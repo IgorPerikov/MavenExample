@@ -9,7 +9,7 @@ public class TestGeneric
 	public void test() 
 	{
 		Double d = new Double(123.32);
-		DList<Double> list = new DList<>(d);
+		DList<Double> list = new DList<Double>(d);
 		list.add(32.32);
 		list.add(54.21);
 		Double d1 = list.getFirstNode().getNext().getNext().getValue();
