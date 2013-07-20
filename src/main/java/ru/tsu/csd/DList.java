@@ -9,6 +9,11 @@ public class DList<T>
 		return firstNode;
 	}
 	
+	public DList()
+	{
+		firstNode = null;
+	}
+	
 	public DList(T value) 
 	{
 		firstNode = new DListNode<T>(value);
@@ -55,4 +60,21 @@ public class DList<T>
 		i++;
 		return i;
 	}
+	
+	
+	@Override
+	protected DList<T> clone()
+	{
+		DList<T> list = new DList<>(null);
+		/*bla bla bla 
+		while (getNext() != null)
+		list.add(nextNode);*/
+		return list;
+	}
+	
+	/*@Override
+	public boolean equals(DList<T> dList)
+	{
+		return true;
+	}*/
 }

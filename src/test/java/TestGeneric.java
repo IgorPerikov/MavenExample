@@ -12,8 +12,7 @@ public class TestGeneric
 		DList<Double> list = new DList<>(d);
 		list.add(32.32);
 		list.add(54.21);
-		Double d1 = list.getFirstNode().getNext().getValue();
+		Double d1 = list.getFirstNode().getNext().getNext().getValue();
 		System.out.println(d1);
 	}
-
 }
