@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.Test;
 
 import ru.tsu.csd.DList;
@@ -5,6 +6,7 @@ import ru.tsu.csd.DList;
 
 public class TestGeneric 
 {
+	@Ignore
 	@Test
 	public void test() 
 	{
