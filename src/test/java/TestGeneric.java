@@ -11,10 +11,13 @@ public class TestGeneric
 	public void test() 
 	{
 		Double d = new Double(123.32);
-		DList<Double> list = new DList<Double>(d);
+		DList<Double> list = new DList<Double>();
+		/*System.out.println(list.size());
+		list.add(d);
+		System.out.println(list.size());
 		list.add(32.32);
+		System.out.println(list.size());
 		list.add(54.21);
-		Double d1 = list.getFirstNode().getNext().getNext().getValue();
-		System.out.println(d1);
+		System.out.println(list.size());*/
 	}
 }

@@ -1,6 +1,6 @@
 package ru.tsu.csd;
 
-public class DList<T>
+public class DList<T> implements Cloneable
 {
 	private DListNode<T> firstNode;
 	
@@ -104,7 +104,7 @@ public class DList<T>
 	}
 	
 	@Override
-	protected DList<T> clone()
+	protected DList<T> clone()  throws CloneNotSupportedException
 	{
 		DList<T> list = new DList<T>();
 		if (this.size() == 0) return list;
@@ -123,7 +123,7 @@ public class DList<T>
 					list.add(nextNode);
 					nextNode = nextNode.getNext();
 				}
-				nextNode = nextNode.getNext();
+				//nextNode = nextNode.getNext();
 			}
 		}
 		return list;
