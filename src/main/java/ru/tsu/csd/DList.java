@@ -1,6 +1,8 @@
 package ru.tsu.csd;
 
-public class DList<T> implements Cloneable
+import java.util.Iterator;
+
+public class DList<T> implements Cloneable, Iterator<T>
 {
 	private DListNode<T> firstNode;
 	
@@ -152,6 +154,24 @@ public class DList<T> implements Cloneable
 			}
 		}
 		return s;
+	}
+
+	@Override
+	public boolean hasNext() 
+	{
+		return false;
+	}
+
+	@Override
+	public T next() 
+	{
+		return null;
+	}
+
+	@Override
+	public void remove() 
+	{
+		
 	}
 	
 	/*@Override
