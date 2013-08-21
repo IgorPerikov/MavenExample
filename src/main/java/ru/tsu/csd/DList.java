@@ -1,10 +1,12 @@
 package ru.tsu.csd;
 
-import java.util.Iterator;
+//import java.util.Iterator;
 
-public class DList<T> implements Cloneable, Iterator<T>
+public class DList<T> implements Cloneable//, Iterator<T>
 {
 	private DListNode<T> firstNode;
+	
+	//private DListNode<T> currentNode;
 	
 	public DListNode<T> getFirstNode()
 	{
@@ -19,11 +21,13 @@ public class DList<T> implements Cloneable, Iterator<T>
 	public DList()
 	{
 		firstNode = null;
+		//currentNode = firstNode;
 	}
 	
 	public DList(T value) 
 	{
 		firstNode = new DListNode<T>(value);
+		//currentNode = firstNode;
 		firstNode.setNext(null);
 	}
 	
@@ -106,7 +110,7 @@ public class DList<T> implements Cloneable, Iterator<T>
 	}
 	
 	@Override
-	protected DList<T> clone()  throws CloneNotSupportedException
+	protected Object clone()  throws CloneNotSupportedException
 	{
 		DList<T> list = new DList<T>();
 		if (this.size() == 0) return list;
@@ -125,7 +129,7 @@ public class DList<T> implements Cloneable, Iterator<T>
 					list.add(nextNode);
 					nextNode = nextNode.getNext();
 				}
-				//nextNode = nextNode.getNext();
+				nextNode = nextNode.getNext();
 			}
 		}
 		return list;
@@ -155,16 +159,23 @@ public class DList<T> implements Cloneable, Iterator<T>
 		}
 		return s;
 	}
-
+	/*
 	@Override
 	public boolean hasNext() 
 	{
-		return false;
+		if (currentNode.getNext() == null) 
+			return false;
+		return true;
 	}
 
 	@Override
 	public T next() 
 	{
+		if (this.hasNext())
+		{
+			currentNode = currentNode.getNext();
+			return currentNode.getValue();
+		}
 		return null;
 	}
 
@@ -173,7 +184,7 @@ public class DList<T> implements Cloneable, Iterator<T>
 	{
 		
 	}
-	
+	*/
 	/*@Override
 	public boolean equals(DList<T> dList)
 	{
